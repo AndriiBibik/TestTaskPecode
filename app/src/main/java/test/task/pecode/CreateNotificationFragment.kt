@@ -69,7 +69,7 @@ class CreateNotificationFragment(private val fragmentNumber: Int) : Fragment() {
         }
         val contentIntent = PendingIntent.getActivity(
             requireContext(),
-            0,
+            fragmentNumber,
             activityIntent,
             PendingIntent.FLAG_ONE_SHOT
         )

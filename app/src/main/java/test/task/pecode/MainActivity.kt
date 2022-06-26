@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -135,6 +136,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addNewFragment() = pagerAdapter.addNewFragment()
+    
     private fun slideForwardIfAtLastPosition() {
         if (pagerAdapter.itemCount == (position + 2)) {
             mainViewPager.setCurrentItem((position + 1), false)
