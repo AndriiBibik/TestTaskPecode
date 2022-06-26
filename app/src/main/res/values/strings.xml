@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Test Task Pecode</string>
+    <string name="create_notification_button_text">Create new notification</string>
+    <string name="notification_title">message.. Test Task Pecode</string>
+    <string name="notification_text">Notification</string>
+    <string name="notifications_channel_name">Test Task Pecode app notification channel</string>
+    <string name="notifications_channel_description">Test Task Pecode app notification channel to show notifications when user of the app presses button</string>
+</resources>

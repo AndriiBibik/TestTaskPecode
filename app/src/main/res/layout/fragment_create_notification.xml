@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_notification_button"
+        android:layout_width="@dimen/notification_button_size"
+        android:layout_height="@dimen/notification_button_size"
+        android:clickable="true"
+        app:backgroundTint="@color/create_notification_button_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/create_notification_text_margin_horizontal"
+        android:gravity="center"
+        android:text="@string/create_notification_button_text"
+        android:textSize="@dimen/create_notification_button_text_size"
+        android:translationZ="@dimen/create_notification_text_translationZ"
+        app:layout_constraintBottom_toBottomOf="@+id/create_notification_button"
+        app:layout_constraintEnd_toEndOf="@+id/create_notification_button"
+        app:layout_constraintStart_toStartOf="@+id/create_notification_button"
+        app:layout_constraintTop_toTopOf="@+id/create_notification_button" />
+
+    <FrameLayout
+        android:id="@+id/bottom_bar_with_buttons_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/bottom_bar_with_buttons_margin_horizontal"
+        android:layout_marginBottom="@dimen/bottom_bar_with_buttons_margin_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/bottom_bar_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_bar_height"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bottom_bar_rounded_rectangle">
+
+            <TextView
+                android:id="@+id/fragment_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/bottom_bar_number_text_size"
+                tools:text="1" />
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/remove_fragment_button"
+            android:layout_width="@dimen/add_remove_button_size"
+            android:layout_height="@dimen/add_remove_button_size"
+            android:clickable="true"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/ic_remove_fab"
+            app:tint="@color/add_remove_button_icon_color" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_fragment_button"
+            android:layout_width="@dimen/add_remove_button_size"
+            android:layout_height="@dimen/add_remove_button_size"
+            android:layout_gravity="right"
+            android:clickable="true"
+            app:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/bottom_bar_container"
+            app:srcCompat="@drawable/ic_add_fab"
+            app:tint="@color/add_remove_button_icon_color" />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
