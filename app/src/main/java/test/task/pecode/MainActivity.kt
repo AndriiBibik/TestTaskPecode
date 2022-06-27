@@ -136,7 +136,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addNewFragment() = pagerAdapter.addNewFragment()
-    
+
     private fun slideForwardIfAtLastPosition() {
         if (pagerAdapter.itemCount == (position + 2)) {
             mainViewPager.setCurrentItem((position + 1), false)
